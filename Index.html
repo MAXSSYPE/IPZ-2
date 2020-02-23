@@ -7,7 +7,34 @@
     <title>Pocket money</title>
     <link rel="stylesheet" href="Style.css">
     <link href="https://fonts.googleapis.com/css?family=Ruda|Satisfy&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/abd7b6a09d.js" crossorigin="anonymous"></script>
+    <!-- - -->
+    <script src="./jquery.min.js"
+    type="text/javascript"></script>
+    <script src="./highcharts.js" type="text/javascript"></script>
+    <!-- - -->
+    <script type="text/javascript">
+        var dat1 = [0];
+    </script>
+    <script src="./exdat.txt" type="text/javascript"></script>
+    <!-- - -->
+    <script type="text/javascript">
+       function showChart(){
+        var chart1;
+        $(document).ready(function(){
+          chart1 = new Highcharts.Chart({
+            chart: {renderTo: 'container1'},
+            series: [{data: dat1}]
+            });
+            
+          });
+          return false;
+       }
+    </script>
+    <!-- -->
+    
 </head>
+
 <body>
 <div class ="nav-bar">
     <ul>
@@ -34,11 +61,22 @@
         </a>
 
     </article>
+    
 
-    <article class="search">
-        Searchhhhhhhh
-        <h1 class="brand-title">Just google it</h1>
+    <article class="col-article">
+        <div class="container-form">
+            <form>
+                <input type="text" id="search-form" name="search" placeholder="search">
+                <button type="button" onclick="showChart()" id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
     </article>
+<div id="container1" style="width: 700px; height: 400px "></div>
+    
+
+
 </section>
 <section class="row">
     <p>
