@@ -106,15 +106,16 @@ a {
   position: inherit;
   background-color: rgb(84, 89, 97);
   width:100%;
-  height:60px;
+  height:100%;
   
 }
 
 .search-window {
   position: relative;
-  width: 25%;
+  margin-left: 33%;
+  top: 38%;
+  width: 50%;
   height: 60px;
-  float:right;
   
 }
 
@@ -170,9 +171,101 @@ a {
 
 .cross {
   float:right;
+}
+
+.after-animation-search-and-tabs {
+  position: inherit;
+  background-color: rgb(84, 89, 97);
+  width:100%;
+  height:60px;
   
 }
 
+.after-animation-search-window {
+  position: relative;
+  width: 25%;
+  height: 60px;
+  float: right;
+  
+}
+
+#after-animation-search-form {
+  width:77%; 
+  height:40px;
+  color: black;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  margin-top:10px;
+  
+}
+
+#search-button {
+background: none;
+border: none; 
+background-color: transparent;
+padding-right: 2px;
+}
+
+.fade-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(19, 24, 20, 0.8);
+  display: none;
+}
+
+.fade-block--visible {
+  display:block;
+}
+
+.modal-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 40%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  height:100%;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.808);
+  border-radius: 10px;
+
+}
+
+.modal-button {
+  color: black;
+}
+
+.modal-label {
+  color: white;
+  text-align: center;
+}
+
+.modal-input {
+  border-radius: 10px;
+  width: 70%;
+  margin-left:15%;
+}
+
+.place-for-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 20%;
+  padding: 10%;
+}
+
+.button-close {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+}
 
 * {box-sizing: border-box}
 

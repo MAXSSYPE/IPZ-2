@@ -1,12 +1,19 @@
 var tabId = 1
 const searchButton = document.querySelectorAll('[data-search-button]')
-searchButton.forEach(searchHandler)
+searchButton.forEach(searchButtonHandler)
 
 const searchForm = document.querySelectorAll('[data-search-form]')
 searchForm.forEach(searchHandler)
 
-function searchHandler(item) {
+const modalButtons = document.querySelectorAll('[data-modal-button]')
+modalButtons.forEach(modalHandler)
+
+
+function searchButtonHandler(item) {
     item.addEventListener("click", addTab)
+}
+
+function searchHandler(item) {
     item.addEventListener("keypress", function(event){
         if (event.keyCode == 13){
             addTab()
@@ -14,9 +21,18 @@ function searchHandler(item) {
     })
 }
 
+function modalHandler(item) {
+    item.addEventListener("click", openModal)
+}
+
 function addTab() {
+    el = document.getElementById('search-and-tabs')
+    if (el.classList.contains('search-and-tabs')) {
+        searchAnim()
+    }
+
     const tab_amount = document.getElementsByClassName('tab')
-    const tab_name =  document.querySelector("#search-form")
+    const tab_name =  document.querySelector("#after-animation-search-form")
 
     if (tab_amount.length < 4 && tab_name.value != ""){
         let newTab = document.createElement("div")// create new div element
@@ -47,5 +63,38 @@ function addTab() {
                         
     }
 
+    
+}
+
+function searchAnim() {
+    var searchAndTabs = document.getElementById('search-and-tabs').classList
+    var searchWindow = document.getElementById('search-window').classList
+    var searchForm = document.getElementById('search-form').id = 'after-animation-search-form'
+    searchAndTabs.remove('search-and-tabs')
+    searchAndTabs.add('after-animation-search-and-tabs')
+    searchWindow.remove('search-window')
+    searchWindow.add('after-animation-search-window')
+        
+}
+
+function openModal() {
+    let modal_n = this.dataset.modalButton
+    const modal = document.getElementById(modal_n)
+    modal.classList.add('fade-block--visible')
+
+    const btn_close = modal.querySelector('[data-modal-close]')
+
+    btn_close.addEventListener('click', function(){
+        modal.classList.remove('fade-block--visible')
+    })
+
+    modal.addEventListener('click', function(){
+        modal.classList.remove('fade-block--visible')
+    })
+
+    modal.querySelector('.modal-window').addEventListener('click', function(e){
+        e.stopPropagation()
+    })
+    
 }
 
