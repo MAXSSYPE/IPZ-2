@@ -267,6 +267,16 @@ padding-right: 2px;
   border-radius: 50px;
 }
 
+.graph {
+  height: 390px;
+  width: 100%;
+  display: block;
+}
+
+.graph-hidden {
+  display: none;
+}
+
 * {box-sizing: border-box}
 
 /* Full-width input fields */
