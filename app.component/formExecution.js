@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const ajaxSend = (formData) => {
         fetch('http://localhost:8080/login', { // файл-обработчик
             credentials: "include", 
@@ -23,8 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
     const forms = document.getElementById('auth');
-    
-    forms.addEventListener('submit-sign-in', function (e) {
+    forms.addEventListener('submit', function (e) {
         e.preventDefault();
     
         let formData = new FormData(this);
@@ -56,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const forms = document.getElementById('reg');
+    const formsReg = document.getElementById('reg');
 
-    forms.addEventListener('submit-sign-up', function(e){
+    formsReg.addEventListener('submit', function(e){
         e.preventDefault();
 
         let formData = new FormData(this);
