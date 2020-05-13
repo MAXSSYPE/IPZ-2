@@ -1,0 +1,81 @@
+body {
+ background: url(fon.JPG) no-repeat center top;
+ -moz-background-size: 100%; /* Firefox 3.6+ */
+ -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+ -o-background-size: 100%; /* Opera 9.6+ */
+ background-size: 100%; /* Современные браузеры */
+margin: 0;
+}
+   .layout {
+    width: 75%;
+    margin: auto;
+    background: #d3dfe9;
+}
+
+
+    ul {
+        display:inline-block; /* расположить пункты горизонтально */
+        width: 100%;
+        list-style-type: none;
+
+        top: 0;
+        margin: 0;
+        padding: 0;
+        background-color:  #acb9c4;
+
+    }
+
+    li {
+        float: right;
+
+    }
+    .li-head-title{
+        padding: 10px;
+        width: 50%;
+        float: left;
+        font-family: 'Satisfy', cursive;
+        font-size: 30px;
+        text-align: center;
+        margin: 3px 0 3px 0;
+
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-family: 'Ruda', sans-serif;
+        font-size: 11px;
+    }
+    .log-on{
+        color: #285063;
+    }
+    li a:hover {
+        background-color: #083b47;
+    }
+
+    .wrap {
+        padding: 20px;
+     }
+
+    .quater{
+        width: 20%;
+        height: 30%;
+    }
+
+    a {
+        color: #285063;
+        text-decoration: none;
+       }
+    a:hover {
+        background-color: #083b47;
+       }
+
+    .faqs{
+        display: inline-block; /*Задаем блочно-строчное отображение*/
+    }
+.image{
+    width: 10%;
+    height: 10%;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pocket money</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ruda|Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <div id="top">
+            <ul>
+                <li class="li-head-title">Money is better than poverty, if only for financial reasons.</li>
+                <li><a href="#home"><h1 class="nav-title log-on">Log on</h1></a></li>
+                <li><a href="#news"><h1 class="nav-title">Log in</h1></a></li>
+                <li>  </li>
+                <li><a href="#faq"><h1 class="nav-title">FAQ</h1></a></li>
+              </ul>
+        </div>
+        <div class="wrap">
+            <div class="quater">
+                <h1 class="title">Time to make money</h1>
+                <script type="text/javascript">
+                    setInterval(function () {
+                     date = new Date(),
+                     h = date.getHours(),
+                     m = date.getMinutes(),
+                     s = date.getSeconds(),
+                     h = (h < 10) ? '0' + h : h,
+                     m = (m < 10) ? '0' + m : m,
+                     s = (s < 10) ? '0' + s : s,
+                     document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
+                    }, 1000);
+                    </script>
+
+                    <span style="color:#285063; font-size:25px; border:2px solid #e1d4ae; background:#e8e3d4; padding:5px;">
+                    <span id="time">00:00:00</span>
+                    </span>
+
+
+                <a href="https://finance.yahoo.com/news/">
+                    <h1 class="title">Yahoo news</h1>
+                </a>
+                <a href="https://www.worldfinance.com/news">
+                    <h1 class="title">  World finance news</h1>
+                </a>
+                <a  href="https://finance.ua/">
+                    <h1 class="title">Finance UA</h1>
+                </a>
+            </div>
+
+            <div class="faqs">
+                <a name="faq">
+                    Vkladivay dengi! avtor:"Maksym,Oleg and Veronika"
+                    <img src="logo.jpg" alt="logo" class="image">
+
+                </a>
+            </div>
+
+    </div>
+
+
+</body>
+</html>
+
+
+
+<li id="login">
+    <a id="login-trigger" href="#"> Войти <span>&#x25BC;</span></a>
+        <div id="login-content">
+            <form>
+                    <fieldset id="inputs">
+                        <input id="username" type="email" name="Email" placeholder="Ваш email адрес" required>
+                    <input id="password" type="password" name="Password" placeholder="Пароль" required>
+                </fieldset>
+                <fieldset id="actions">
+                        <input type="submit" id="submit" value="Войти">
+                        <label><input type="checkbox" checked="checked"> Запомнить меня</label>
+                    </fieldset>
+            </form>
+        </div>
+</li>
+<li id="signup">
+   <a href="">Регистрация</a>
+</li>
