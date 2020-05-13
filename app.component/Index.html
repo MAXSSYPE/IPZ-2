@@ -61,7 +61,7 @@
 
 <div id="modal-log-in" class="fade-block">
     <div class="modal-window">
-        <div class="card">
+        <form class="card" id="auth" action="" method="get">
             <div class="card-header">
                 <h1 class="modal-label">Enter your account</h1>
             </div>
@@ -93,13 +93,13 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
 <div id="modal-log-on" class="fade-block">
     <div class="modal-window">
-        <div class="card">
+        <form class="card" id="reg" action="" method="get">
             <div class="card-header">
                 <h1 class="modal-label">Register</h1>
             </div>
@@ -129,12 +129,13 @@
                         data-modal-sign-up
                         type="button"
                         class="button-close"
+                        onClick="signUp"
                     >
                         Sign up
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 

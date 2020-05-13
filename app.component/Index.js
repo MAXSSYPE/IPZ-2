@@ -58,9 +58,7 @@ function addTab() { //all procces of tab creating is here
         
         let tab = document.querySelector(`#${newTab.id}`)//Looking for a tab with the same id
         tab.appendChild(cross)
-        tab.lastChild.addEventListener("click", ()=> {
-            tab.remove() // if cross clicked - tab is removed
-        })
+       
         //hide all graphs before new appears
         document.querySelectorAll('.graph').forEach(function(item){ //select all 'data-tab-content
             item.classList.add("graph-hidden") //add to classes tab-content-hidden
@@ -76,6 +74,11 @@ function addTab() { //all procces of tab creating is here
         
         drawGraph(newTab.id) // creating new graph     
         
+        tab.lastChild.addEventListener("click", ()=> {
+            tab.remove() // if cross clicked - tab is removed
+            document.getElementById(`graph-${newTab.id}`).remove() //if cross clicked - graph is removed
+        })
+
         tab.addEventListener("click", tabsClick) //add unique listener for every tab
     }
 
@@ -168,3 +171,7 @@ function drawGraph(id) {
 	chart.container(`graph-${id}`);
 	chart.draw();
 };
+
+function signUp(){
+    //Function for checking the form
+}
