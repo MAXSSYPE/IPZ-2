@@ -18,139 +18,160 @@
 </head>
 
 <body>
-<div class ="nav-bar">
-    <ul>
-        <li class="li-head-title">Money is better than poverty, if only for financial reasons.</li>
-        <li data-modal-button ="modal-log-on"><a href="#home"><h1 class="nav-title">Log on</h1></a></li>
-        <li data-modal-button ="modal-log-in"><a href="#news"><h1 class="nav-title">Log in</h1></a></li>
-        <li>  </li>
-        <li><a href="#faq"><h1 class="nav-title">FAQ</h1></a></li>
-      </ul>
-</div>
-<section class="row">
-    <article class="quater">
-        <div class="time"><iframe src="http://free.timeanddate.com/clock/i75yywix/n367/szw110/szh110/hoc367701/hbw1/hfc000/cf100/hgr0/fac367701/mqce29402/mql6/mqw2/mqd74/mhce29402/mhl6/mhw1/mhd74/mmce29402/mml4/mmw1/mmd74/hhcfff/hmcfff/hsce29402" frameborder="0" width="110" height="110"></iframe>
-            <h1 class="title">Time to make money</h1>
-        </div>
-       <a class="news1" href="https://finance.yahoo.com/news/">
-            <h1 class="title">Yahoo news</h1>
-        </a>
-        <a class="news1" href="https://www.worldfinance.com/news">
-            <h1 class="title">  World finance news</h1>
-        </a>
-        <a class="news1" href="https://finance.ua/">
-            <h1 class="title">Finance UA</h1>
-        </a>
+<div class="layout">
+    <div class ="nav-bar">
+        <ul>
+            <li class="li-head-title">Money is better than poverty, if only for financial reasons.</li>
+            <li data-modal-button ="modal-log-on"><a href="#home"><h1 class="nav-title">Log on</h1></a></li>
+            <li data-modal-button ="modal-log-in"><a href="#news"><h1 class="nav-title">Log in</h1></a></li>
+            <li>  </li>
+            <li><a href="#faq"><h1 class="nav-title">FAQ</h1></a></li>
+        </ul>
+    </div>
+    <section class="row">
+        <article class="quater">
+            <div class="time">
+                <h1 class="title">Time to make money</h1>
+                <script type="text/javascript">
+                    setInterval(function () {
+                     date = new Date(),
+                     h = date.getHours(),
+                     m = date.getMinutes(),
+                     s = date.getSeconds(),
+                     h = (h < 10) ? '0' + h : h,
+                     m = (m < 10) ? '0' + m : m,
+                     s = (s < 10) ? '0' + s : s,
+                     document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
+                    }, 1000);
+                    </script>
 
-    </article>
+                    <span style="color:#285063; font-size:25px; border:2px solid #e1d4ae; background:#e8e3d4; padding:5px;">
+                    <span id="time">00:00:00</span>
+                    </span>
 
-<div class="search-form-window" id="search-form-window">
-    <header class="search-and-tabs" id = search-and-tabs>
 
-        <div class="search-window" id="search-window">
-            <input type="text" id="search-form" data-search-form placeholder="search">
-            <button type="button" id="search-button" data-search-button>
-                <!--i class="fas fa-search"></i-->
-                <img src="../imgs/mag.png"/>
-            </button>
-        </div>
-
-    </header>
-    
-</div>
-
-<div id="modal-log-in" class="fade-block">
-    <div class="modal-window">
-        <div class="card">
-            <div class="card-header">
-                <h1 class="modal-label">Enter your account</h1>
             </div>
-            <div class="card-body">
-                <hr>
-                <dl>
-                    <dt class="modal-label"><label class="modal-label">Email adress</label></dt>
-                    <input class="modal-input">
-                </dl>
-                <dl>
-                    <dt class="modal-label"><label class="modal-label">Password</label></dt>
-                    <input class="modal-input">
-                </dl>
-                <hr>
-                <div class="place-for-buttons">
-                    <button
-                        data-modal-close
-                        type="button"
-                        class="button-close"
-                    >
-                        Закрыть окно
-                    </button>
-                    <button
-                        data-modal-sign-in
-                        type="button"
-                        class="button-close"
-                    >
-                        Sign in 
-                    </button>
+            <a class="news1" href="https://finance.yahoo.com/news/">
+                <h1 class="title">Yahoo news</h1>
+            </a>
+            <a class="news1" href="https://www.worldfinance.com/news">
+                <h1 class="title">  World finance news</h1>
+            </a>
+            <a class="news1" href="https://finance.ua/">
+                <h1 class="title">Finance UA</h1>
+            </a>
+
+        </article>
+
+    <div class="search-form-window" id="search-form-window">
+        <header class="search-and-tabs" id = search-and-tabs>
+
+            <div class="search-window" id="search-window">
+                <input type="textapp.component/Style.css: needs merge" id="search-form" data-search-form placeholder="search">
+                <button type="button" id="search-button" data-search-button>
+                    <!--i class="fas fa-search"></i-->
+                    <img src="../imgs/mag.png"/>
+                </button>
+            </div>
+
+        </header>
+        
+    </div>
+
+    <div id="modal-log-in" class="fade-block">
+        <div class="modal-window">
+            <form class="card" id="auth">
+                <div class="card-header">
+                    <h1 class="modal-label">Enter your account</h1>
                 </div>
-            </div>
+                <div class="card-body">
+                    <hr>
+                    <dl>
+                        <dt class="modal-label"><label class="modal-label">Email adress</label></dt>
+                        <input class="modal-input">
+                    </dl>
+                    <dl>
+                        <dt class="modal-label"><label class="modal-label">Password</label></dt>
+                        <input class="modal-input">
+                    </dl>
+                    <hr>
+                    <div class="place-for-buttons">
+                        <button
+                            data-modal-close
+                            type="button"
+                            class="button-close"
+                        >
+                            Закрыть окно
+                        </button>
+                        <button
+                            data-modal-sign-in
+                            type="submit-sign-in"
+                            class="button-close"
+                        >
+                            Sign in 
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</div>
 
-<div id="modal-log-on" class="fade-block">
-    <div class="modal-window">
-        <div class="card">
-            <div class="card-header">
-                <h1 class="modal-label">Register</h1>
-            </div>
-            <div class="card-body">
-                <hr>
-                <dl>
-                    <dt class="modal-label"><label class="modal-label">Email</label></dt>
-                    <input class="modal-input">
-
-                    <dt class="modal-label"><label class="modal-label">Password</label></dt>
-                    <input class="modal-input">
-
-                    <dt class="modal-label"><label class="modal-label">Repeat Password</label></dt>
-                    <input class="modal-input">
-                </dl>
-                <hr>
-                <div class="place-for-buttons">
-
-                    <button
-                        data-modal-close
-                        type="button"
-                        class="button-close"
-                    >
-                        Закрыть окно
-                    </button>
-                    <button
-                        data-modal-sign-up
-                        type="button"
-                        class="button-close"
-                    >
-                        Sign up
-                    </button>
+    <div id="modal-log-on" class="fade-block">
+        <div class="modal-window">
+            <form class="card" id="reg">
+                <div class="card-header">
+                    <h1 class="modal-label">Register</h1>
                 </div>
-            </div>
+                <div class="card-body">
+                    <hr>
+                    <dl>
+                        <dt class="modal-label"><label class="modal-label">Email</label></dt>
+                        <input class="modal-input">
+
+                        <dt class="modal-label"><label class="modal-label">Password</label></dt>
+                        <input class="modal-input">
+
+                        <dt class="modal-label"><label class="modal-label">Repeat Password</label></dt>
+                        <input class="modal-input">
+                    </dl>
+                    <hr>
+                    <div class="place-for-buttons">
+
+                        <button
+                            data-modal-close
+                            type="button"
+                            class="button-close"
+                        >
+                            Закрыть окно
+                        </button>
+                        <button
+                            data-modal-sign-up
+                            type="submit-sign-up"
+                            class="button-close"
+                        >
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+
+    </section>
+    <section class="row">
+        <p>
+            <a name="faq">
+                Vkladivay dengi! avtor:"Maksym,Oleg and Veronika"
+                <img src="../imgs/joke.jpg" alt="it is joke" class="image">
+            </a>
+        </p>
+        <p>
+            <img src="../imgs/logo.jpg" alt="logo" class="image">
+
+        </p>
+    </section>
 </div>
-
-</section>
-<section class="row">
-    <p>
-        <a name="faq">
-            Vkladivay dengi! avtor:"Maksym,Oleg and Veronika"
-            <img src="../imgs/joke.jpg" alt="it is joke" class="image">
-        </a>
-    </p>
-    <p>
-        <img src="../imgs/logo.jpg" alt="logo" class="image">
-
-    </p>
-</section>
-<script src="Index.js"></script>
+<script src="./Index.js"></script>
+<script src="./formExecution.js"></script>
 </body>
 </html>
