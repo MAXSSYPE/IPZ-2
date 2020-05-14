@@ -6,3 +6,5 @@ Autors:
 2 Rakhuba Veronika - PM, frontend developer
 
 3 Shvachko Oleg - tech lead, fronend developer
+
+Ссылка на репозиторий с сервером https://github.com/MAXSSYPE/ipz_backend
