@@ -218,28 +218,35 @@ padding-right: 2px;
   bottom: 0;
   background-color: rgba(19, 24, 20, 0.8);
   display: none;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  margin: 0;
 }
 
 .fade-block--visible {
   display:block;
 }
 
-
 .modal-window {
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 40%;
-  width: 30%;
+  height: 60%;
+  width: 40%;
   transform: translate(-50%, -50%);
 }
 
 .card {
   height:100%;
-  width: 70%;
-  background-color: rgba(0, 0, 0, 0.808);
+  width: 80%;
   border-radius: 10px;
-
+  background-color: #d3dfe9;
+  font-family: 'Satisfy', cursive;
+  font-size: 50%;
+  text-align: center;
+  margin: auto 0 0 0;
 }
 
 .modal-button {
@@ -247,14 +254,25 @@ padding-right: 2px;
 }
 
 .modal-label {
-  color: white;
+  color: black;
   text-align: center;
+  font-size: 28px;
+}background-color: #d3dfe9;
+font-family: 'Satisfy', cursive;
+font-size: 50%;
+text-align: center;
+margin: auto 0 0 0;
+
+.words{
+  color: #285063;
+  text-align: center;
+  font-size: medium;
+  font-family: 'Ruda', sans-serif;
 }
 
 .modal-input {
   border-radius: 10px;
   width: 70%;
-  margin-left:15%;
 }
 
 .place-for-buttons {
@@ -266,9 +284,18 @@ padding-right: 2px;
 }
 
 .button-close {
-  background-color: black;
-  color: white;
-  border-radius: 50px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30%;
+  background-color: #9cbbd4;
+  color: #285063;
+  text-align: center;
+  font-size: medium;
+  font-family: 'Ruda', sans-serif;
+}
+
+.button-close :hover {
+  background-color: #083b47;
 }
 
 .graph {

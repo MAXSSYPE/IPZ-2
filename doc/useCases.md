@@ -13,13 +13,13 @@ Unauthorised user makes an attempt to enter into account.
 @startuml
 User -> client : email and password
 alt successful case
-    client -> server : authentification request\njson {email:value\npassword:value}
+    client -> server : authentification request\n/login?name=value&password=value
 
     alt user exists and correct password
-        server -> client : json {status: ok}
+        server -> client : json {result: success}
         client -> User : data
     else incorrect password
-        server -> client : json {status: not ok}
+        server -> client : json {result: not success\nmessage: "some message"}
         client -> User : show message "wrong email or password"
     end
 
@@ -41,7 +41,7 @@ end
 ### API
 method | request | response
 --- | --- | --- |
-POST /login | {email: value,password:value} | {status: ok/not ok}
+GET /login?name=value&password=value | none | {result: success/not success, message: "error message"}
  
 ## Log On
 Unauthorised user makes an attempt to make an account
@@ -57,13 +57,13 @@ Unauthorised user makes an attempt to make an account
 User -> client : email and password
 alt email is ok and passwords are correct 
 
-    client -> server : registration request\njson{email:value\npassword:value}
+    client -> server : registration request\n/register?name=value&password=value
     alt user does not exist
-        server -> client : json {status : ok}
+        server -> client : json {result : success}
         client -> User : user successfully created
     else user exists
-        server -> client : json {status : not ok}
-        client -> User : show messag "user already exists"
+        server -> client : json {result : not success\nmessage: "error message"}
+        client -> User : show message "user already exists"
     end
 else passwords are not match
     client -> User : show message "passwords are not match"
@@ -85,7 +85,7 @@ end
 ### API
 method | request | response
 --- | --- | --- |
-POST /register | {email: value,password:value} | {status: ok/not ok}
+GET /register?name=value&password=value | none | {result: success/not success message: "error message"}
 
 
 ## Search

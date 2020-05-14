@@ -1,14 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const ajaxSend = (formData) => {
-        fetch('http://localhost:8080/login', { // файл-обработчик
+        fetch(`http://localhost:8080/login?${formData}`, { // файл-обработчик
             credentials: "include", 
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json', // отправляемые данные 
-                
-            },
+            method: 'GET',
             mode: 'no-cors',
-            body: JSON.stringify(formData)
             })
             .then((response) => console.log(response.json())
             )
@@ -27,21 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
         let formData = new FormData(this);
         formData = Object.fromEntries(formData);
+
+        let query = Object.keys(formData)
+                                .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(formData[k]))
+                                .join('&');
     
-        ajaxSend(formData);
+        ajaxSend(query);
         this.reset();
     });
 
     const ajaxSignUp = (formData) => {
-        fetch('http://localhost:8080/register', { // файл-обработчик
+        fetch(`http://localhost:8080/register?${formData}`, { // файл-обработчик
             credentials: "include", 
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json', // отправляемые данные 
-                
-            },
+            method: 'GET',
             mode: 'no-cors',
-            body: JSON.stringify(formData)
             })
             .then((response) => console.log(response.json())
             )
@@ -62,7 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let formData = new FormData(this);
         formData = Object.fromEntries(formData)
 
-        ajaxSignUp(formData)
+        let query = Object.keys(formData)
+                        .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(formData[k]))
+                        .join('&');
+
+        ajaxSignUp(query)
         this.reset();
 
     })
